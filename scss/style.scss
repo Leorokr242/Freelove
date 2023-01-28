@@ -1,0 +1,58 @@
+@import "./mixin";
+@import "./variables";
+@import "./header";
+@import "./main";
+@import "./footer";
+@import "./contacto";
+@import "./historia";
+@import "./servicios";
+@import "./productos";
+
+
+* {
+    @include reset;
+    box-sizing: border-box; }
+
+@font-face {
+    font-family: titule;
+    src: url("../assets/Fonts/winterbeauty-Script.otf"); }
+
+body {
+    background-color: map-get($colores, "body");
+    height: auto; }
+
+.grad {
+    background-image: linear-gradient(to right, $gradienteS); }
+
+.tit {
+    @include ShadowT font-family: titule;
+    font-size: 2em;
+    color: map-get($colores, "titulo") }
+
+.radio {
+    border-radius: $bordeRedondo;
+    @include ShadowB; }
+
+.back {
+    background-color: map-get($colores, "fondoHeader"); }
+
+.bot {
+    perspective: 2500;
+    transition: 1s ease; }
+
+.bot:hover {
+    font-size: 1.5em; }
+
+#suti2venta {
+    background-color: map-get($colores, "fondoHeader");
+    margin: 40px 0 40px 0; }
+
+
+#articMonk {
+    margin-top: 40px; }
+
+
+
+
+
+

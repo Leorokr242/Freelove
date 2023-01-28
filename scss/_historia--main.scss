@@ -1,0 +1,24 @@
+
+/* PAGINA HISTORIA */
+
+#mainHistoria p{
+    text-align: justify;
+    margin: 0px 20px 0 20px;
+}
+
+#imgHistoria {
+    width: 100vw;
+    height: 80px;
+    margin-top: 40px;
+}
+
+#tituloHistoria{
+    @include titulos
+}
+
+#imagen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0 30px 0;
+}

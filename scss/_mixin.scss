@@ -1,0 +1,100 @@
+@mixin reset {
+    margin: 0;
+    padding: 0;
+}
+
+@mixin titulos {
+    margin: 40px 10px 10px 10px;
+    padding: 10px;
+    font-family: titule;
+    font-size: 4em;
+    text-align: center;
+}
+@mixin ShadowB {
+    box-shadow: 10px 10px 10px rgba(51, 51, 51, 0.326);
+}
+@mixin ShadowT {
+    text-shadow: 5px 5px 5px rgba(51, 51, 51, 0.356);
+}
+
+@mixin bordes {
+    margin: 40px 10px 0 10px;
+    padding: 10px;
+    
+}
+@mixin container--card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 0 40px 0 40px;
+    padding: 10px;
+}
+
+
+@mixin cards {
+        width: 300px;
+        height: 400px;
+        background: #000;
+        border-radius: 15px;
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all .25s ease;
+        backface-visibility: hidden;
+        &:hover{
+            transform: scale(1.05);
+
+        }
+        &:hover:after{
+            height: 280px;
+        }
+        &:hover .con-text p{
+            margin-bottom: 0px;
+            opacity: 1;
+
+        }
+        &:hover img{ 
+            transform: scale(1.25);
+
+        }
+        &:after {
+            width: 100%;
+            content: '';
+            left: 0px;
+            bottom: 1px;
+            height: 150px;
+            position: absolute;
+            background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+
+
+        }
+        & img{
+            height: 100%;
+            z-index: 10;
+            transition: all .25s ease;
+        }
+        & .con-text {
+            z-index: 30;
+            position: absolute;
+            bottom: 15px;
+            color: #fff;
+            padding: 20px;
+            padding-bottom: 30px;
+
+        }
+        & .con-text p{
+            font-size: .8rem;
+            opacity: 0;
+            margin-bottom: -170px;
+            transition: all .25s ease;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            flex-direction: column;
+        }
+
+}

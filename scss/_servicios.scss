@@ -1,0 +1,20 @@
+.titulo--servicios {
+    @include titulos
+    @include ShadowT
+}
+.card{
+    @include cards
+}
+.card div h2 a {
+    text-decoration: none;
+    color: white;
+}
+.marg--servicios{
+    margin: 0 30px 10px 30px;
+}
+.container--servicios{
+      @include container--card
+}
+#servTit {
+    @extend #tituloHistoria;
+    @include ShadowT }
